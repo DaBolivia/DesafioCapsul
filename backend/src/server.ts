@@ -8,7 +8,7 @@ const prisma = new PrismaClient();
 app.use(express.json());
 app.use(cors());
 
-// Criar um produto
+
 app.post("/products", async (req: Request, res: Response) => {
   const { name, price, description } = req.body;
   try {
@@ -21,7 +21,7 @@ app.post("/products", async (req: Request, res: Response) => {
   }
 });
 
-// Listar produtos
+
 app.get("/products", async (_req: Request, res: Response) => {
   try {
     const products = await prisma.product.findMany();
@@ -31,7 +31,7 @@ app.get("/products", async (_req: Request, res: Response) => {
   }
 });
 
-// Atualizar um produto
+
 app.put("/products/:id", async (req: Request, res: Response) => {
   const { id } = req.params;
   const { name, price, description } = req.body;
@@ -46,7 +46,7 @@ app.put("/products/:id", async (req: Request, res: Response) => {
   }
 });
 
-// Deletar um produto
+
 app.delete("/products/:id", async (req: Request, res: Response) => {
   const { id } = req.params;
   try {

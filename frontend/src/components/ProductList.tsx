@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ProductItem } from "./ProductItem";
 import { ProductForm } from "./ProductForm";
-import "./ProductStyles.css"; // Importando os estilos
+import "./ProductStyles.css"; 
 
 export type Product = {
   id: number;

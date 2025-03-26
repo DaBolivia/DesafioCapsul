@@ -18,7 +18,7 @@ export function ProductItem({ product, deleteProduct, editProduct }: Props) {
             <small>Atualizado em: {new Date(product.updated_at).toLocaleString()}</small>
           </div>
           
-          <div className="button-container"> {/* Novo container */}
+          <div className="button-container"> 
             <div className="button-group">
               <button className="edit-button" onClick={() => editProduct(product)}>Editar</button>
               <button className="delete-button" onClick={() => deleteProduct(product.id)}>Excluir</button>
